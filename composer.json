@@ -1,12 +1,12 @@
 {
-	"name": "fromholdio/silverstripe-fulltext-filters",
+	"name": "fromholdio/silverstripe-schedulable",
 	"type": "silverstripe-vendormodule",
 	"description": "This module adds embargo/expiry scheduling to your data objects and site tree.",
 	"license": "BSD-3-Clause",
-	"keywords": ["silverstripe", "fulltext", "search", "search filters", "innodb", "mysql", "mariadb"],
-	"homepage": "https://github.com/fromholdio/silverstripe-fulltext-filters",
+	"keywords": ["silverstripe", "embargo", "expiry", "schedule", "publishing", "publish date"],
+	"homepage": "https://github.com/fromholdio/silverstripe-schedulable",
 	"support": {
-		"issues": "https://github.com/fromholdio/silverstripe-fulltext-filters/issues"
+		"issues": "https://github.com/fromholdio/silverstripe-schedulable/issues"
 	},
 	"authors": [{
 		"name": "Luke Fromhold",
@@ -17,12 +17,9 @@
         "silverstripe/vendor-plugin": "^1.0",
         "silverstripe/framework": "^4.0"
     },
-    "suggest": {
-        "fromholdio/silverstripe-fulltext-innodb": "^1.0"
-    },
 	"autoload": {
 		"psr-4": {
-			"Fromholdio\\FullTextFilters\\": "src/"
+			"Fromholdio\\Schedulable\\": "src/"
 		}
 	},
 	"prefer-stable": true,
