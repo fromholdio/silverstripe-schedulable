@@ -1,7 +1,7 @@
 {
 	"name": "fromholdio/silverstripe-fulltext-filters",
 	"type": "silverstripe-vendormodule",
-	"description": "This module adds three fulltext SearchFilters to your SilverStripe project.",
+	"description": "This module adds embargo/expiry scheduling to your data objects and site tree.",
 	"license": "BSD-3-Clause",
 	"keywords": ["silverstripe", "fulltext", "search", "search filters", "innodb", "mysql", "mariadb"],
 	"homepage": "https://github.com/fromholdio/silverstripe-fulltext-filters",
