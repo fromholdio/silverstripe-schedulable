@@ -10,7 +10,7 @@ Also adds a `GridFieldScheduledStatus` component, allowing you to display the sc
 
 ## Installation
 
-`composer require fromholdio/silverstripe-fulltext-filters`
+`composer require fromholdio/silverstripe-schedulable`
 
 ## Details & Usage
 
