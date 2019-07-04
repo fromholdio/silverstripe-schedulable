@@ -29,6 +29,17 @@ Provides some additional accessors:
 
 If an object has both an embargo-until date/time, and an expiry date/time, `getScheduleStatusLabel()` will reflect the most relevant current state. (So, in that case, it will return that it is Embargoed Until X, and once that date/time passes, it will change to Will Expire At Y.) 
 
+Example of applying the extension to `SiteTree` class:
+
+```yml
+---
+Name: extensions
+---
+SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - Fromholdio\Schedulable\Extensions\Schedulable
+```
+
 ## To Do
 
 * Better docs
