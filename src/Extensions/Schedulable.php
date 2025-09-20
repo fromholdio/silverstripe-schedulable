@@ -5,11 +5,11 @@ namespace Fromholdio\Schedulable\Extensions;
 use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\Control\Controller;
 use SilverStripe\Core\Convert;
+use SilverStripe\Core\Extension;
 use SilverStripe\Forms\DatetimeField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\LiteralField;
-use SilverStripe\ORM\DataExtension;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\DataQuery;
 use SilverStripe\ORM\FieldType\DBDatetime;
@@ -17,7 +17,7 @@ use SilverStripe\ORM\Queries\SQLSelect;
 use SilverStripe\Security\Permission;
 use SilverStripe\Versioned\Versioned;
 
-class Schedulable extends DataExtension
+class Schedulable extends Extension
 {
     private static $db = [
         'ScheduleEmbargoDateTime'   =>  'Datetime',
@@ -134,7 +134,7 @@ class Schedulable extends DataExtension
 
     public function augmentSQL(SQLSelect $query, DataQuery $dataQuery = null)
     {
-        if (Controller::has_curr() && Controller::curr() instanceof LeftAndMain) {
+        if (Controller::curr() instanceof LeftAndMain) {
             return;
         }
 
@@ -151,7 +151,7 @@ class Schedulable extends DataExtension
 
     public function canView($member = null)
     {
-        if (Controller::has_curr() && Controller::curr() instanceof LeftAndMain) {
+        if (Controller::curr() instanceof LeftAndMain) {
             return;
         }
 

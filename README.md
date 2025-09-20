@@ -6,7 +6,9 @@ Also adds a `GridFieldScheduledStatus` component, allowing you to display the sc
 
 ## Requirements
 
-* [silverstripe-framework](https://github.com/silverstripe/silverstripe-framework) ^4
+* [silverstripe-framework](https://github.com/silverstripe/silverstripe-framework) ^6
+
+(See branch 1.x for Silverstripe 4 & 5 support.)
 
 ## Installation
 
