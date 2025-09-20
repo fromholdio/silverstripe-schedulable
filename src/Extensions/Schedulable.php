@@ -132,7 +132,7 @@ class Schedulable extends Extension
         return false;
     }
 
-    public function augmentSQL(SQLSelect $query, DataQuery $dataQuery = null)
+    public function augmentSQL(SQLSelect $query, ?DataQuery $dataQuery = null)
     {
         if (Controller::curr() instanceof LeftAndMain) {
             return;
