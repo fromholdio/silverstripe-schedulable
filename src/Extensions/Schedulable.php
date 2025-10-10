@@ -1,6 +1,6 @@
 <?php
 
-namespace Ci\App\Core\Extensions;
+namespace Fromholdio\Schedulable\Extensions;
 
 use Fromholdio\CMSMessageField\Forms\CMSMessageField;
 use SilverStripe\Admin\AdminController;
