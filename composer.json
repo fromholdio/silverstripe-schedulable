@@ -20,6 +20,11 @@
 			"Fromholdio\\Schedulable\\": "src/"
 		}
 	},
+    "extra": {
+        "branch-alias": {
+            "dev-upgrade-v3": "3.0.x-dev"
+        }
+    },
 	"prefer-stable": true,
 	"minimum-stability": "dev"
 }
