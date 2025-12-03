@@ -154,10 +154,16 @@ class Schedulable extends Extension
         }
     }
 
+    public function isSchedulablePublicContext(): bool
+    {
+        $is = !(Controller::curr() instanceof AdminController);
+        $this->owner->invokeWithExtensions('updateIsSchedulablePublicContext', $is);
+        return $is;
+    }
 
     public function augmentSQL(SQLSelect $query, ?DataQuery $dataQuery = null): void
     {
-        if (Controller::curr() instanceof AdminController) {
+        if (!$this->owner->isSchedulablePublicContext()) {
             return;
         }
         $stage = Versioned::get_stage();
@@ -174,7 +180,7 @@ class Schedulable extends Extension
     public function canView(?Member $member = null): ?bool
     {
         $can = null;
-        if (!Controller::curr() instanceof AdminController) {
+        if ($this->owner->isSchedulablePublicContext()) {
             $stage = Versioned::get_stage();
             if ($stage === Versioned::LIVE || !Permission::check('VIEW_DRAFT_CONTENT')) {
                 $can = (!$this->owner->isScheduleEmbargoed() && !$this->owner->hasScheduleExpired());
